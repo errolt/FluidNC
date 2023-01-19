@@ -408,6 +408,9 @@
     <ClInclude Include="FluidNC\src\Machine\UserOutputs.h">
       <Filter>src\Machine</Filter>
     </ClInclude>
+    <ClInclude Include="FluidNC\src\Machine\StatusOutputs.h">
+      <Filter>src\Machine</Filter>
+    </ClInclude>
     <ClInclude Include="FluidNC\src\Pins\LedcPin.h">
       <Filter>src\Pins</Filter>
     </ClInclude>
@@ -693,6 +696,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="FluidNC\src\Machine\UserOutputs.cpp">
+      <Filter>src\Machine</Filter>
+    </ClCompile>
+    <ClCompile Include="FluidNC\src\Machine\StatusOutputs.cpp">
       <Filter>src\Machine</Filter>
     </ClCompile>
     <ClCompile Include="FluidNC\src\Configuration\Tokenizer.cpp">

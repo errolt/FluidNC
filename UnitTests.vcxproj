@@ -161,6 +161,7 @@
     <ClInclude Include="FluidNC\src\Configuration\JsonGenerator.h" />
     <ClInclude Include="FluidNC\src\SpindleDatatypes.h" />
     <ClInclude Include="FluidNC\src\Machine\UserOutputs.h" />
+    <ClInclude Include="FluidNC\src\Machine\StatusOutputs.h" />
     <ClInclude Include="FluidNC\src\Pins\LedcPin.h" />
     <ClInclude Include="FluidNC\src\Configuration\ParserHandler.h" />
     <ClInclude Include="FluidNC\src\Jog.h" />
@@ -250,6 +251,7 @@
     <ClCompile Include="FluidNC\src\Configuration\Validator.cpp" />
     <ClCompile Include="FluidNC\src\Stepper.cpp" />
     <ClCompile Include="FluidNC\src\Machine\UserOutputs.cpp" />
+    <ClCompile Include="FluidNC\src\Machine\StatusOutputs.cpp" />
     <ClCompile Include="FluidNC\src\Configuration\Tokenizer.cpp" />
     <ClCompile Include="FluidNC\src\WebUI\WifiConfig.cpp" />
     <ClCompile Include="FluidNC\src\Pins\PinAttributes.cpp" />

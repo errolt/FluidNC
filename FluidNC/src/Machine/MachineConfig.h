@@ -23,6 +23,7 @@
 #include "SPIBus.h"
 #include "I2SOBus.h"
 #include "UserOutputs.h"
+#include "StatusOutputs.h"
 #include "Macros.h"
 
 namespace Machine {
@@ -64,6 +65,7 @@ namespace Machine {
         Probe*                _probe       = nullptr;
         Control*              _control     = nullptr;
         UserOutputs*          _userOutputs = nullptr;
+        StatusOutputs*        _statusOutputs = nullptr;
         SDCard*               _sdCard      = nullptr;
         Macros*               _macros      = nullptr;
         Start*                _start       = nullptr;

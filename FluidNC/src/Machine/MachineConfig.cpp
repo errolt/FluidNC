@@ -49,6 +49,7 @@ namespace Machine {
         handler.section("parking", _parking);
 
         handler.section("user_outputs", _userOutputs);
+        handler.section("status_outputs", _statusOutputs);
         // TODO: Consider putting these under a gcode: hierarchy level? Or motion control?
         handler.item("arc_tolerance_mm", _arcTolerance, 0.001, 1.0);
         handler.item("junction_deviation_mm", _junctionDeviation, 0.01, 1.0);
@@ -81,6 +82,10 @@ namespace Machine {
 
         if (_userOutputs == nullptr) {
             _userOutputs = new UserOutputs();
+        }
+
+        if (_statusOutputs == nullptr) {
+            _statusOutputs = new StatusOutputs();
         }
 
         if (_sdCard == nullptr) {

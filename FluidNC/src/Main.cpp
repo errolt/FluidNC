@@ -81,6 +81,8 @@ void setup() {
 
             config->_userOutputs->init();
 
+            config->_statusOutputs->init();
+
             config->_axes->init();
 
             config->_control->init();
