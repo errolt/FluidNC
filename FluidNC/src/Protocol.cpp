@@ -287,6 +287,9 @@ void protocol_main_loop() {
             activeChannel = nullptr;
         }
 
+        //Update Status outputs.
+        config->_statusOutputs->setStatus(sys.state);
+
         // Auto-cycle start any queued moves.
         protocol_auto_cycle_start();
         protocol_execute_realtime();  // Runtime command check point.

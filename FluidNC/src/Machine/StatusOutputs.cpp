@@ -28,19 +28,27 @@ namespace Machine {
     }
     
     bool StatusOutputs::setStatus(State state) {
-        if(CurrentState == state)
+        if(_CurrentState == state)
         {
             //Nothing to do. Exit
             return true;
         }
-        //Save new state.
-        CurrentState=state;
-
-        //Turn off all outputs.
-        for (size_t io_num = 0; io_num < sizeof(_StatusOutput); io_num++) {
-            Pin& pin = _StatusOutput[(uint)state];
-            pin.synchronousWrite(false);
+        //Turn off current state output.
+        Pin& pin_old = _StatusOutput[(uint)_CurrentState];
+        if (pin_old.defined()) {
+            pin_old.synchronousWrite(false);
         }
+
+        const char* StateNameBefore;
+        const char* StateNameAfter;
+        auto        it1    = StateName.find(_CurrentState);
+        StateNameBefore              = it1 == StateName.end() ? "<invalid>" : it1->second;                
+        auto        it2    = StateName.find(state);
+        StateNameAfter              = it2 == StateName.end() ? "<invalid>" : it2->second;                
+        log_info("Status outputs changing from "<< StateNameBefore <<" to " <<StateNameAfter);
+        //Save new state.
+        _CurrentState=state;
+
 
         //Turn on selected status
         Pin& pin = _StatusOutput[(uint)state];

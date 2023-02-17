@@ -10,7 +10,7 @@
 
 namespace Machine {
     class StatusOutputs : public Configuration::Configurable {
-    State CurrentState;
+    State _CurrentState = State::Sleep; //Default value that will be updated at startup.
 
     public:
         StatusOutputs();

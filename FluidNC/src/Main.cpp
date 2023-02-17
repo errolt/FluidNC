@@ -191,6 +191,9 @@ void loop() {
         log_info("Stalling due to too many failures");
         while (1) {}
     }
+
+    //Update Status outputs.
+    config->_statusOutputs->setStatus(sys.state);
 }
 
 void WEAK_LINK machine_init() {}
